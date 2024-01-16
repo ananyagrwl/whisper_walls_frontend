@@ -39,7 +39,7 @@ export const SendPost = ({ newMessage, setNewMessage, setMessages }) => {
                 }}
                     onClick={handlePostMessage}>Post</Button>
             </div>
-            <div className=' text-slate-300 m-0 items-start justify-start'>
+            <div className=' text-slate-300 m-0 items-start justify-start enter'>
                 Press "Enter" to Post*
             </div>
         </div>

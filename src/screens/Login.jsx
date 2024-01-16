@@ -70,13 +70,15 @@ const Login = () => {
     try {
       const token = await signInWithPopup(auth, provider);
       if (token) {
-        // console.log(token.user);
-        // console.log(token.user.uid);
-        // console.log(token.user.displayName);
-        // console.log(token.user.email);
+        console.log(token.user);
+        console.log(token.user.uid);
+        console.log(token.user.displayName);
+        console.log(token.user.email);
+        // console.log(data.data.name);
         const data = await axios.post("https://whisper-walls-backend.vercel.app/login", {
           uid: token.user.uid
         })
+        console.log(data.data.name);
         dispatch(updateName(data.data.name))
         setName(data.data.name);
         Cookies.set('token', data.data.token, { expires: 7 });

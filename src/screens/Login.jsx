@@ -75,8 +75,8 @@ const Login = () => {
         console.log(token.user.displayName);
         console.log(token.user.email);
         // console.log(data.data.name);
-        const data = await axios.post("https://whisper-walls-backend.vercel.app/login", {
-          uid: token.user.uid
+        const data = await axios.post("https://whisper-walls-backend.vercel.app/signup", {
+          uid: token.user.uid, email: token.user.email, name: token.user.displayName
         })
         console.log(data.data.name);
         dispatch(updateName(data.data.name))

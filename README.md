@@ -45,6 +45,9 @@ GitHub Link:
 Frontend: https://github.com/ananyagrwl/whisper_walls_frontend
 Backend: https://github.com/ananyagrwl/whisper_walls_backend
 
+Documentation Link :
+https://docs.google.com/document/d/1VXMnJqQeUWCFOmuPKHWDGoYnKcphkAHM/edit?usp=sharing&ouid=102832276304791531927&rtpof=true&sd=true
+
 
 Thanking You,
 Ananya Agrawal

@@ -37,7 +37,7 @@
 •	The website is completely responsive and can be used in your smart phones.
 
 
-### Deployemnt : 
+### Deployment : 
 Vercel is used for deploying both frontend and backend.
 
 

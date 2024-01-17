@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+** Tech Stack: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ *** Front-end:
+ 1. React
+ 2. Material-UI
+ 3. Tailwind
+ 4. Axios
+ 5. JS-Cookie
+ 6. React-router-dom
+ 7. Redux
+    
+*** Backend:
+1. Node
+2. JWT Token
+3. Mongoose
+4. Firebase (For google auth and data storage)
+5. Cors
 
-## Available Scripts
+** Features: 
+1) User Authentication System 
+1. A secure authentication system is provided which included user registration using email and password. This is made using JWT Token. The JWT Token is signed in the Node and sent to frontend for authorisation. The token is then stored in MongoDB.
+2. Google Authentication: The Authentication can also be done using Google. I used Firebase for this purpose. Firebase allows us to integrate google auth securely.
+3. Forgot Password: In case the user forgets his/her password, by clicking on forgot password, he will receive an email to reset his password.
+4. Logout: The user can logout at any time and will be redirected to login page. In this I added a feature using Cookies that, if the user doesn’t log out and tries to reach home screen, it can do so. And if he logout and then tries to reach home page then it will redirect it to login page only. This secure functionality was achieved by adding token in Cookies.
 
-In the project directory, you can run:
 
-### `npm start`
+2) Secret Posting Section
+1. Home Screen: A user-friendly home screen is made using React, MUI and Tailwind.
+2. Navbar: Navbar contains facility of Home, Logout and displaying the Username. The Username is displayed using Redux and is stored in JS-Cookies. Redux allows me to use the name anywhere in the website using useSelector while Cookie allows me to store the name in a cookie so that even on refreshing the page, the name is still available.
+3. Send Post: Each user is allowed to post one Secret and either press Enter or Post button to post it. These posts are stored in Firebase.
+4. Real-Time Posting: The showstopper of my website is that the posts will load as soon as any user sends it without refreshing the page. This functionality, which is usually achieved by socket io, was achieved using Firebase Snapshot feature.
+5. Post Display and Anonymous behaviour: The Posts are displayed anonymously, ie without revealing the identity of the sender.
+6. Deleting Post: Each Post card contains a feature of delete post, and a pop up will appear asking for the confirmation. This is handled in Firebase.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3) Responsiveness:
+•	The website is completely responsive and can be used in your smart phones.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4) Deployemnt : Vercel is used for deploying both frontend and backend.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+** How to use ?
+1. Login with email or password or directly with google.
+2. Home screen will be displayed where your name will be displayed in the top right corner.
+3. Write your secrete in the text filed and post it.
+4. Your post along with everyone's post will be displayed in the post section.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Website URL
+https://whisperwalls.vercel.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+GitHub Link:
+Frontend: https://github.com/ananyagrwl/whisper_walls_frontend
+Backend: https://github.com/ananyagrwl/whisper_walls_backend
 
-### `npm run eject`
+Documentation Link :
+https://docs.google.com/document/d/1VXMnJqQeUWCFOmuPKHWDGoYnKcphkAHM/edit?usp=sharing&ouid=102832276304791531927&rtpof=true&sd=true
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Thanking You,
+Ananya Agrawal
+ananya88agrawal@gmail.com
++91 8878331661
+https://github.com/ananyagrwl
+https://www.linkedin.com/in/ananya-agrawal-65b1b7252/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

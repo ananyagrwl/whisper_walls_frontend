@@ -1,4 +1,5 @@
 ** Tech Stack: 
+
  *** Front-end:
  1. React
  2. Material-UI
@@ -7,6 +8,7 @@
  5. JS-Cookie
  6. React-router-dom
  7. Redux
+    
 *** Backend:
 1. Node
 2. JWT Token
@@ -14,12 +16,13 @@
 4. Firebase (For google auth and data storage)
 5. Cors
 
-** Features
+** Features: 
 1) User Authentication System 
 1. A secure authentication system is provided which included user registration using email and password. This is made using JWT Token. The JWT Token is signed in the Node and sent to frontend for authorisation. The token is then stored in MongoDB.
 2. Google Authentication: The Authentication can also be done using Google. I used Firebase for this purpose. Firebase allows us to integrate google auth securely.
 3. Forgot Password: In case the user forgets his/her password, by clicking on forgot password, he will receive an email to reset his password.
 4. Logout: The user can logout at any time and will be redirected to login page. In this I added a feature using Cookies that, if the user doesn’t log out and tries to reach home screen, it can do so. And if he logout and then tries to reach home page then it will redirect it to login page only. This secure functionality was achieved by adding token in Cookies.
+
 
 2) Secret Posting Section
 1. Home Screen: A user-friendly home screen is made using React, MUI and Tailwind.
@@ -29,8 +32,13 @@
 5. Post Display and Anonymous behaviour: The Posts are displayed anonymously, ie without revealing the identity of the sender.
 6. Deleting Post: Each Post card contains a feature of delete post, and a pop up will appear asking for the confirmation. This is handled in Firebase.
 
+
 3) Responsiveness:
 •	The website is completely responsive and can be used in your smart phones.
+
+
+4) Deployemnt : Vercel is used for deploying both frontend and backend.
+
 
 ** How to use ?
 1. Login with email or password or directly with google.

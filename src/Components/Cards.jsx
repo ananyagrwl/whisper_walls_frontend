@@ -56,23 +56,17 @@ export const Cards = ({message}) => {
                 <Card variant="outlined" sx={{alignItems: 'center', justifyContent: 'center', width: 300}}>
                         <CardContent sx={{ minHeight: '180px', display: 'flex', flexDirection: 'column',justifyContent: 'space-around', alignItems: 'center'}}> 
                             <Typography sx={{ fontSize: 20}} color="text.secondary" gutterBottom>Confession</Typography>
-                            <Typography variant="body2" sx={{ textAlign: 'center', overflow:"scroll", height:"100px", scrollbarWidth: 'thin','&::-webkit-scrollbar':{width:'0px'}, '&::-webkit-scrollbar-thumb': {backgroundColor:"transparent"}}}> {message.Message}</Typography>
+                            <Typography variant="body2" sx={{ textAlign: 'center', maxHeight: '100px', overflow: 'hidden', scrollbarWidth: 'none' }}>{message.Message}</Typography>
                         </CardContent>
                         <CardActions sx={{ justifyContent: 'flex-end' }}>
-                            {/* <IconButton onClick={handleToggleFavorite}>
-                                {isFavorited ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                            </IconButton> */}
-                            {/* <Typography variant="body2" color="text.secondary">{likeCount} Likes</Typography> */}
                             <Tooltip title="Delete">
-                            {/* <IconButton onClick={() => handleDelete(message.id)}> */}
-                            <IconButton onClick={() => setOpen(true)}>
-                                <DeleteIcon/>
-                            </IconButton>
+                                <IconButton onClick={() => setOpen(true)}>
+                                    <DeleteIcon/>
+                                </IconButton>
                             </Tooltip>
                         </CardActions>
                 </Card>
                 {open && <AlertDialog/>}
-                
         </div>
     )
 }
